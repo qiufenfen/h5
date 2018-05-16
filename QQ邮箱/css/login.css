@@ -1,0 +1,150 @@
+* {
+	margin: 0;
+}
+
+body {
+	background-color: #FFFFFF;
+	font-size: 12px;
+	font-family: "微软雅黑";
+}
+
+a {
+	color: #225592;
+	text-decoration: none;
+}
+
+.header a,
+.footer a {
+	color: #1d5494;
+}
+
+.container {
+	min-height: 500px;
+}
+
+
+/*header样式*/
+
+.header {
+	min-width: 1070px;
+	height: 62px;
+	background-color: #eff4fa;
+}
+
+.header_logo {
+	float: left;
+	width: 182px;
+	height: 35px;
+	background-image: url(../img/qqmail_logo_default_35h206ff1.png);
+	background-size: 182px 35px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	text-indent: -9999em;
+	margin-top: 14px;
+	margin-left: 40px;
+}
+
+.header_links {
+	line-height: 30px;
+	text-align: right;
+	padding-top: 16px;
+	padding-right: 40px;
+	overflow: hidden;
+	color: #868686;
+}
+
+.header_links a,
+.footer a {
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.header_links a:hover,
+.footer a:hover {
+	text-decoration: underline;
+}
+
+
+/*content样式*/
+
+.content {
+	width: 960px;
+	padding: 0 24px;
+	margin: 32px auto;
+}
+
+.content-wrap {
+	zoom: 1;
+	min-height: 372px;
+	padding-top: 40px;
+    margin: 0 20px 60px 25px;
+}
+
+.content-wrap:after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	clear: both;
+}
+
+.login_container {
+	width: 334px;
+	height: 387px;
+	visibility: visible;
+	float: right;
+	border: 1px solid #a0b1c4;
+	border-radius: 5px;
+	position: relative;
+	z-index: 12;
+	padding: 0;
+	overflow: hidden;
+}
+
+.login_pictures {
+	margin-right: 395px;
+	position: relative;
+}
+
+
+.login_pictures_picture{
+	background-image: url(../img/tg-mail20f1b0.gif);
+	background-position: right 100px;
+	height: 400px;
+	background-repeat: no-repeat;
+}
+
+.login_pictures_txt{
+	position: absolute;
+	top: 0px;
+	left: 10px;
+	font-size: 14px;
+	padding-top: 25px;
+	font-weight: normal;
+	line-height: 24px;
+}
+
+.login_pictures_title{
+	line-height: 26px;
+	font-size: 24px;
+	font-weight: normal;
+	color:#6f95c8;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+
+/*footer样式*/
+
+.footer {
+	min-width: 1070px;
+	height: 36px;
+	line-height: 36px;
+	background-color: #eff4fa;
+	text-align: center;
+	color: #868686;
+}
+
+.gray {
+	color: #868686;
+}

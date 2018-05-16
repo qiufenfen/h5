@@ -1,0 +1,210 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: '宋体';
+}
+
+/*头部的样式*/
+.header{
+	width: 100%;
+	height: 150px;
+	background-color: #0A90FF;
+	position: fixed;
+	top:0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	color: #FFFFFF;
+}
+.h-1{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: relative;
+}
+.h-1-1{
+	flex: 1;
+}
+.h-1-1 span{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 25px;
+}
+
+
+.h-1-3 li{
+	width: 20px;
+	border: 1px solid #FFFFFF;
+	margin-top: 3px;
+	margin-left: 10px;
+	background-color: #FFFFFF;
+}
+
+
+.search-input{
+	width: 80%;
+	height: 40px;
+	margin-left: 10%;
+	margin-right: 10%;
+	border: 0;
+	text-align: center;
+	font-size: 20px;
+}
+
+.h-3 ul li{
+	display: inline-block;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+.h-3 ul li a{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+/*图片组的样式*/
+
+.imgs{
+	margin-top: 160px;
+}
+
+.img-group{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-bottom: 4%;
+}
+
+.img-div{
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.img-div img{
+	width: 70%;
+	border: 2px solid #e1f1f6;
+	border-radius: 50%;
+}
+
+
+/*活动图片*/
+.active-img{
+	text-align: center;
+}
+.active-img img{
+	width: 90%;
+}
+
+/*商家推荐*/
+.shop-hot{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.shop-hot span{
+	display: inline-block;
+	width: 90px;
+	height: 1px;
+	background-color: gray;
+	margin: 10px;
+}
+
+/*商品列表*/
+.shop{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 5%;
+}
+
+.shop-info > div{
+	margin-bottom: 10px;
+}
+
+.shop-logo{
+	flex: 1;
+}
+
+.shop-logo img{
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.shop-info{
+	flex: 4;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.shop-name{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.sale-info{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#sale-star{
+	color: yellow;
+}
+
+#bird-send{
+	background-color:#0A90FF ;
+	color: #FFFFFF;
+	border-radius: 3px;
+}
+
+.send-money{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+
+.shop-holiday span{
+	background-color: red;
+	color: #FFFFFF;
+	border-radius: 3px;
+}
+
+.first-order{
+	margin-top: 20px;
+}
+
+.first{
+	background-color: greenyellow;
+	color: #FFFFFF;
+}
+
+/*底部样式*/
+.footer{
+	width: 100%;
+	height: 40px;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+    border-top: 1px solid gray;
+    background-color: #FFFFFF;
+}
+
+.f-div{
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+}
+
+.f-div img{
+	width: 65%;
+}

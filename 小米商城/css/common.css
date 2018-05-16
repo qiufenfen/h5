@@ -1,0 +1,33 @@
+/*重置样式文件*/
+body,div,input,p,a,ul,li,ol,dl,dt,dd,h1,h2,h3,h4,h5,h6,option,img,table,td{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #fff;
+}
+ul,li,ol{
+    list-style:none;/*去除列表自带样式*/
+}
+
+a{
+    text-decoration:none;/*去除a元素下划线*/
+    display: inline-block;/*设置为行内块级元素*/
+}
+img{
+    border:none;
+}
+.clearfloat{
+    clear:both;/*清除浮动*/
+}
+/*公共宽度*/
+.public-width{
+    min-width: 1200px;
+    width: 100%;
+}
+/*居中*/
+.center{
+    width:1226px;
+    position: relative;
+    margin: 0 auto;
+}

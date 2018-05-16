@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			
+			#wrap {
+				padding: 20px;
+			}
+			
+			#nav span {
+				margin-bottom: 10px;
+				display: inline-block;
+				line-height: 30px;
+			}
+			
+			#nav div {
+				padding: 10px 10px 20px;
+				border-bottom: 1px solid #000;
+				margin-bottom: 10px;
+			}
+			
+			#nav div mark {
+				border: 1px solid #000;
+				padding: 10px;
+				margin-right: 14px;
+			}
+			
+			#nav div mark a {
+				padding: 5px;
+				background-color: #f40;
+				margin-left: 10px;
+				text-decoration: none;
+				color: #fff;
+			}
+			
+			#list {
+				border: 1px solid #000;
+				padding: 20px;
+			}
+			
+			#list li {
+				border-bottom: 1px solid #000;
+				padding: 5px;
+			}
+			
+			#list li span {
+				color: #999;
+			}
+			
+			#list li a {
+				text-decoration: none;
+				color: #666;
+				padding: 0 8px;
+			}
+			
+			.shop-list {
+				margin-top: 20px;
+				padding: 20px;
+				border: 1px solid #000;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<nav id="nav">
+				<span>选中的商品：</span>
+				<div></div>
+			</nav>
+			<ul id="list">
+			</ul>
+			<section class="shop-list"></section>
+		</div>
+
+		<script type="text/javascript">
+			var goodsList = [{
+					imgUrl: '',
+					name: '苹果',
+					cpu: '奔腾',
+					scene: 'IPS硬屏笔记本',
+					type: '集成显卡',
+					volume: 10000,
+					price: 5000
+				},
+				{
+					imgUrl: '',
+					name: '苹果',
+					cpu: '凌动',
+					scene: '超极本',
+					type: '核芯显卡',
+					volume: 2000,
+					price: 5000
+				},
+				{
+					imgUrl: '',
+					name: '联想',
+					cpu: '奔腾',
+					scene: '校园学生本',
+					type: '集成显卡',
+					volume: 5200,
+					price: 50000
+				},
+				{
+					imgUrl: '',
+					name: '苹果',
+					cpu: '赛扬',
+					scene: 'IPS硬屏笔记本',
+					type: '核芯显卡',
+					volume: 100000,
+					price: 50000
+				},
+				{
+					imgUrl: '',
+					name: '联想',
+					cpu: '奔腾',
+					scene: 'IPS硬屏笔记本',
+					type: '独立显卡',
+					volume: 300000,
+					price: 50000
+				},
+				{
+					imgUrl: '',
+					name: '华硕',
+					cpu: '酷睿M',
+					scene: '商务办公本',
+					type: '集成显卡',
+					volume: 400000,
+					price: 50000
+				},
+				{
+					imgUrl: '',
+					name: 'ThinkPad',
+					cpu: '奔腾',
+					scene: '影音娱乐本',
+					type: '独立显卡',
+					volume: 50000,
+					price: 50000
+				},
+				{
+					imgUrl: '',
+					name: '苹果',
+					cpu: '奔腾',
+					scene: '游戏本',
+					type: '双显卡',
+					volume: 60000,
+					price: 50000
+				},
+				{
+					imgUrl: '',
+					name: '苹果',
+					cpu: '奔腾',
+					scene: 'IPS硬屏笔记本',
+					type: '双显卡',
+					volume: 60000,
+					price: 50000
+				}
+			]
+
+			//数据
+			var crumbData = [{
+					title: '品牌',
+					data: ['联想', '华硕', '苹果', '神舟', 'ThinkPad', '小米', '戴尔', '雷神', 'MACHENIKE', '麦本本', '微星', '惠普', '炫龙', '华为', '微软', '火影']
+				},
+				{
+					title: '笔记本CPU',
+					data: ['酷睿i5', '酷睿I7', '奔腾', '酷睿M', '酷睿I3', '赛扬', '凌动', ]
+				},
+				{
+					title: '显卡类型',
+					data: ['独立显卡', '核芯显卡', '双显卡', '集成显卡']
+				},
+				{
+					title: '适用场景',
+					data: ['影音娱乐本', '游戏本', '时尚轻薄本', '商务办公本', '校园学生本', '超极本', 'IPS硬屏笔记本']
+				}
+			]
+
+			var oDiv = document.querySelector('#nav div');
+			var oUl = document.querySelector('#list');
+			var shopList = document.querySelector('.shop-list');
+			var oLi = null;
+			var oSpan = null;
+			var oA = null;
+			var oMark = null;
+			var lis = oUl.children;
+			var itemA = null;
+			//利用对象存储选取的条件
+			var chooseObj = {};
+			//筛选条件
+			var filterTerm = ['name', 'cpu', 'type', 'scene'];
+			var filterObj = {};
+
+			// 循环数据
+			for(var i = 0; i < crumbData.length; i++) {
+				// console.log(crumbData[i]);
+				oLi = document.createElement('li');
+				oSpan = document.createElement('span');
+				oSpan.innerText = crumbData[i].title + ':';
+				oLi.appendChild(oSpan);
+
+				for(var j = 0; j < crumbData[i].data.length; j++) {
+					oA = document.createElement('a');
+					oA.href = 'javascript:;';
+					oA.innerHTML += crumbData[i].data[j];
+					oLi.appendChild(oA);
+				}
+				oUl.appendChild(oLi);
+			}
+
+			//为每个a添加点击事件
+			for(var k = 0; k < lis.length; k++) {
+				itemA = lis[k].querySelectorAll('a');
+				lis[k].prevNode = null;
+				lis[k].index = k;
+				for(var b = 0; b < itemA.length; b++) {
+					itemA[b].addEventListener('click', function(e) {
+						var parent = this.parentNode;
+
+						//生成筛选条件,对筛选条件进行排序。
+						//把每一个li的下标作为key值,把每一个a的内容作为值。
+						chooseObj[parent.index] = this.innerText;
+						// console.log(chooseObj);
+						chooseHtml();
+
+						//筛选出想要的数据
+						// 存一下筛选的值
+						filterObj[filterTerm[parent.index]] = this.innerText.trim();
+						// console.log(filterObj);
+						filterData();
+
+						e.preventDefault();
+						if(parent.prevNode) {
+							parent.prevNode.style.color = '';
+						}
+						this.style.color = 'red';
+						// 点击 后记录点击的这个元素
+						parent.prevNode = this;
+					})
+				}
+
+			}
+
+			// 选中的商品
+			function chooseHtml() {
+				//动态添加选中的商品
+				var html = '';
+				for(var i = 0; i < lis.length; i++) {
+					if(chooseObj[i]) {
+						html += `<mark>${chooseObj[i]}<a href="javascript:;" data-index="${i}">x</a></mark>`;
+					}
+				}
+				oDiv.innerHTML = html;
+				//删除选中的商品同时删除对象里面的数据
+				var chooseA = oDiv.querySelectorAll('a');
+
+				for(var l = 0; l < chooseA.length; l++) {
+					chooseA[l].addEventListener('click', function(e) {
+						e.preventDefault();
+						// this.parentNode.parentNode.removeChild(this.parentNode);
+						this.parentNode.remove();
+
+						//除数据
+						delete chooseObj[this.dataset.index];
+
+						//删除数据后激活选项当前状态改变
+						lis[this.dataset.index].prevNode.style.color = '';
+
+					})
+				}
+			}
+
+			//筛选条件
+			function filterData() {
+				var filterData = goodsList;
+				// console.log(filterData);
+				for(var attr in filterObj) {
+					filterData = filterData.filter(function(obj) {
+						return obj[attr] === filterObj[attr]
+
+					})
+				}
+				shopList.innerHTML = '<pre> ' + JSON.stringify(filterData, null, 3) + ' </pre>';
+			}
+		</script>
+	</body>
+
+</html>

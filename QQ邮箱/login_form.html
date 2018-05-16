@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+			}
+			
+			body {
+				font-size: 12px;
+				font-family: "微软雅黑";
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			.login {
+				width: 334px;
+				margin: 0;
+				padding: 0;
+			}
+			
+			.header {
+				height: 50px;
+				position: relative;
+				background-color: #f9fbfe;
+				font-size: 16px;
+			}
+			
+			.switcher_plogin,
+			.switcher_qlogin {
+				color: #999;
+				display: inline-block;
+				width: 164px;
+				height: 45px;
+				line-height: 45px;
+				outline: none;
+				text-align: center;
+			}
+			
+			.switcher_plogin:hover,
+			.switcher_qlogin:hover {
+				color: #000000;
+			}
+			
+			.loginTips {
+				width: 334px;
+				height: 32px;
+			}
+			
+			.login-form {
+				width: 284px;
+				margin: 0 auto;
+			}
+			
+			.uinArea,
+			.pwdArea {
+				height: 50px;
+				position: relative;
+			}
+			
+			.inputOuter {
+				position: relative;
+				background: none;
+				border: 1px solid #96a5b4;
+				border-radius: 0px;
+				height: 38px;
+				width: 282px;
+				border-radius: 2px;
+			}
+			
+			.inputstyle {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				padding: 10px 40px 10px 10px;
+				border-radius: 3px;
+				width: 232px;
+				outline: none;
+				border: 0;
+			}
+			
+			.uin_del{
+				background-image: url(img/ptlogin_delete1e9c5d.png);
+				width: 22px;
+				height: 22px;
+				position: absolute;
+				right: 10px;
+				top: 0px;
+				background-repeat: no-repeat;
+				margin-top: 10px;
+			}
+			
+			.btn{
+				width: 282px;
+				height: 40px;
+				line-height: 39px;
+				border: 1px solid #5a98de;
+				color: #FFFFFF;
+				background-color: #5a98de;
+				border-radius: 5px;
+				font-weight: 400;
+				font-size: 16px;
+			}
+			
+			.low_login{
+				margin: 15px 0;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="login" class="login">
+
+			<div id="header" class="header">
+
+				<a href="#" class="switcher_qlogin">快速登录</a>
+
+				<a href="#" class="switcher_plogin">账号密码登录</a>
+
+			</div>
+
+			<div class="loginTips">
+
+			</div>
+
+			<div id="web_qr_login" class="web_qr_login">
+
+				<div class="login-form">
+					<form action="" method="post">
+						<div id="uinArea" class="uinArea">
+							<label id="uin_tips" class="uin_tips" for="u" style="display: none;">支持QQ号/邮箱/手机号登录</label>
+							<div class="inputOuter">
+								<input type="text" id="u" class="inputstyle" />
+								<a id="uin_del" class="uin_del" href="javascript:void(0);" style="display: block;"></a>
+							</div>
+						</div>
+
+						<div id="pwdArea" class="pwdArea">
+							<label id="pwd_tips" class="pwd_tips" for="p" style="display: none;">QQ密码</label>
+							<div class="inputOuter">
+								<input type="password" id="p" class="inputstyle password" maxlength="16" />
+							</div>
+						</div>
+
+						<div class="submit">
+							
+							
+							<div id="p_low_login_enable" class="low_login" title="为了确保你的信息安全，不建议在网吧等公共环境勾选此项">
+								<input type="checkbox" name="low_login_wording" id="low_login_wording" />
+								<label for="low_login_wording" class="low_login_wording">下次自动登录</label>
+							</div>
+							<input id="login_button" class="btn" type="submit" value="登&nbsp;&nbsp;录" />
+
+						</div>
+
+					</form>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</body>
+
+</html>

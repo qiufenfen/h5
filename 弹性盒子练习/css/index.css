@@ -1,0 +1,143 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "microsoft yahei";
+	font-size: 12px;
+	background-color: #FFFFFF;
+}
+
+.line-11 {
+	width: 100%;
+	height: 267px;
+	position: fixed;
+	top: 0;
+	z-index: -80;
+	background: url(../img/03.PNG) no-repeat;
+	background-size: 100% 267px;
+	-webkit-filter: blur(8px);
+	-moz-filter: blur(8px);
+	-o-filter: blur(8px);
+	-ms-filter: blur(8px);
+	filter: blur(8px);
+}
+
+.line-1 {
+	width: 100%;
+	height: 267px;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	background-color: rgba(92, 94, 99, 0.8);
+}
+
+.line-1-top {
+	width: 100%;
+	height: 212px;
+	display: flex;
+	flex-direction: row;
+}
+
+.line-1-topleft {
+	width: 180px;
+}
+
+.line-1-topleft img {
+	width: 129px;
+	height: 129px;
+	margin-left: 15%;
+	margin-top: 25%;
+	margin-right: 10%;
+}
+
+.line-1-topright {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	color: #FFFFFF;
+}
+
+.line-1-topright>div{
+	margin-bottom: 10px;
+}
+
+.topright-1 {
+	margin-top: 48px;
+	font-weight: 700;
+}
+
+.brand {
+	background-color: red;
+	display: inline-block;
+	width: 60px;
+	height: 37px;
+	line-height: 37px;
+	text-align: center;
+	border-radius: 2px;
+	font-size: 2em;
+}
+
+.shop-name {
+	font-size: 2em;
+	margin-left: 10px;
+}
+
+.topright-2 {
+	font-size: 15px;
+	display: flex;
+}
+
+.topright-3 {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	position: relative;
+}
+
+.minus {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background-image: url(../img/decrease_1@2x.png);
+}
+
+.activities {
+	display: inline-block;
+	font-size: 16px;
+	margin-left: 10px;
+}
+
+.num {
+	display: inline-block;
+	width: 90px;
+	height: 50px;
+	border-radius: 40px;
+	background-color: rgba(33, 34, 38, 0.4);
+	text-align: center;
+	line-height: 50px;
+	position: absolute;
+	right: 22px;
+	font-size: 15px;
+}
+
+.line-1-bottom {
+	width: 100%;
+	height: 55px;
+	background-color: rgba(33, 34, 38, 0.4);
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	color: #FFFFFF;
+}
+
+.notice{
+	display: inline-block;
+	width: 45px;
+	height: 24px;
+	background-image: url(../img/bulletin@2x.png);
+	margin-left: 22px;
+	margin-right: 10px;
+}

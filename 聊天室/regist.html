@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>用户注册</title>
+	<link rel="stylesheet" href="bootstrap-3.3.7/css/bootstrap.css" />
+	<style>
+		.container{
+			width: 400px;
+		}
+		img{
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container text-center">
+		<h2 class="form-login-heading">用户注册</h2>
+		<form class="form-login" action="#" method="post">
+			<div class="login-wrap">
+				<img src="img/g.jpg" id="img1"/>
+				<input type="file" name="photo" id="photo" style="display: none;"/><br/>
+				<input type="button" class="btn btn-success" id="selectBtn" value="选择头像" style="display: block; margin: 10px auto 0px;"/><br/>
+				<input type="text" class="form-control" placeholder="用户名" id="username" name="username" autofocus> <br>
+				<input type="password" class="form-control" placeholder="密码" id="password" name="password"><br>
+				<input type="password" class="form-control" placeholder="再次输入密码" id="password2" name="password2"><br>
+				<input type="text" class="form-control" placeholder="年龄" id="age" name="age"><br>
+				<input type="text" class="form-control" placeholder="签名" id="motto" name="motto">
+				<label class="checkbox"> 
+					<span class="pull-right"> 
+						<a href="login.html"> 已有账号，立即登录</a>
+					</span>
+				</label>
+				<button class="btn btn-success btn-block" type="submit">注册</button>
+			</div>
+		</form>
+	</div>
+	
+	<script>
+		//为按钮绑定点击事件
+		$('selectBtn').addEventListener('click',function(){
+			//触发文件选择控件的点击事件(选择文件)
+			$('photo').click();
+		});	
+	
+		//为文件选择框设置内容改变事件 
+		$('photo').addEventListener('change',function(event){
+//			var path = this.value;//获取文件路径
+//			console.info(path);
+//			path = path.substring(path.lastIndexOf('\\')+1);//截取文件名称
+			var file=event.currentTarget.files[0];
+			var reader=new FileReader();
+			reader.onload=function(e){
+				document.querySelector("#img1").src=e.target.result;
+//				$("#img1").attr("src",e.target.result);
+			}
+			reader.readAsDataURL(file);
+			
+		});
+		
+		function $(id){
+			return document.getElementById(id);
+		}
+	</script>
+	
+</body>
+
+</html>
